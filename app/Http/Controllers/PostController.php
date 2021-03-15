@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,9 +13,20 @@ class PostController extends Controller
 
     public function index()
     {
+        $gitHubLink ="https://github.com/login/oauth/authorize" ;
+
+        $parametrs=[
+            'client_id' => env('OAUTH_GITHUB_CLIENT_ID'),
+            'redirect_uri' => env('OAUTH_GITHUB_REDIRECT_URI'),
+            'scope' => 'user, user:email'
+        ] ;
+
+
+        $gitHubLink .= '?'. http_build_query($parametrs);
+
         $posts = Post::paginate(5);
 
-        return view('pages.index', compact('posts'));
+        return view('pages.index', compact('posts', 'gitHubLink'));
 
     }
 

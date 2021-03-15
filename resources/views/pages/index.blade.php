@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+   @guest <p ><a href="{{$gitHubLink}}">GitHub Auth</a></p>@endguest
+
+   @auth<p> {{ auth()->user()->name }}</p>@endauth
     @foreach($posts as $post)
 
     <h1><a href="{{route('show', $post)}}">{{$post->title}}</a></h1>

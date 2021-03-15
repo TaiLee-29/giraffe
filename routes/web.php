@@ -26,7 +26,7 @@ Route::middleware('guest')->group(function (){
 
 
 });
-
+Route::get('/github/callback',\App\Http\Controllers\OAuth\GitHubController::class)->name('git');
 Route::get('/author/{id}', \App\Http\Controllers\PostByAuthorController::class)->name('post-by-author');
 Route::get('/','\App\Http\Controllers\PostController@index')->name('index');
 Route::get('/{id}','\App\Http\Controllers\PostController@show')->name('show')->where('id', '[0-9]+');
