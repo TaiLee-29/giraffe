@@ -2,7 +2,7 @@
 
 @section('content')
    @guest <p ><a href="{{$gitHubLink}}">GitHub Auth</a></p>@endguest
-
+   @guest <p ><a href="{{$yahooLink}}">Yahoo Auth</a></p>@endguest
    @auth<p> {{ auth()->user()->name }}</p>@endauth
     @foreach($posts as $post)
 

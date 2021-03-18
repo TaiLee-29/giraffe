@@ -13,20 +13,30 @@ class PostController extends Controller
 
     public function index()
     {
+        $yahooLink ="https://api.login.yahoo.com/oauth2/request_auth";
+
+        $parametrsYahoo=[
+            'client_id' => env('OAUTH_YAHOO_CLIENT_ID'),
+            'redirect_uri' => env('OAUTH_YAHOO_REDIRECT_URI'),
+            'response_type'=>'code'
+        ] ;
+
+        $yahooLink .= '?'. http_build_query($parametrsYahoo);
+
         $gitHubLink ="https://github.com/login/oauth/authorize" ;
 
-        $parametrs=[
+        $parametrsGitHub=[
             'client_id' => env('OAUTH_GITHUB_CLIENT_ID'),
             'redirect_uri' => env('OAUTH_GITHUB_REDIRECT_URI'),
             'scope' => 'user, user:email'
         ] ;
 
 
-        $gitHubLink .= '?'. http_build_query($parametrs);
+        $gitHubLink .= '?'. http_build_query($parametrsGitHub);
 
         $posts = Post::paginate(5);
 
-        return view('pages.index', compact('posts', 'gitHubLink'));
+        return view('pages.index', compact('posts', 'gitHubLink', 'yahooLink'));
 
     }
 

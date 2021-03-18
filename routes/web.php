@@ -26,6 +26,7 @@ Route::middleware('guest')->group(function (){
 
 
 });
+Route::get('/yahoo/callback',\App\Http\Controllers\OAuth\YahooController::class)->name('yahoo');
 Route::get('/github/callback',\App\Http\Controllers\OAuth\GitHubController::class)->name('git');
 Route::get('/author/{id}', \App\Http\Controllers\PostByAuthorController::class)->name('post-by-author');
 Route::get('/','\App\Http\Controllers\PostController@index')->name('index');
