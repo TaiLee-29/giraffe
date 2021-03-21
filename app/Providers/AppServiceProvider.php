@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use GeoIp2\Database\Reader;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -15,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
 */
 public function register()
 {
-//
+  //
 }
 
 /**
