@@ -28,9 +28,14 @@ class GeoIpRouterController extends Controller
     public function route()
     {
 
-        $ip = request()->ip() != '192.168.10.11' ?: request()->server->get('HTTP_X_FORWARDED_FOR');
+
+
+        $ip = request()->ip() != '127.0.0.1' ?: request()->server->get('HTTP_X_FORWARDED_FOR');
+
         $this->geoRoute->parse($ip);
         $this->agent->parse(request()->server->get('HTTP_USER_AGENT'));
+
+
 
         Visit::create([
             'ip' => $ip,
@@ -40,7 +45,7 @@ class GeoIpRouterController extends Controller
             'clientBrowser' => $this->agent->clientBrowser(),
 
         ]);
-        return redirect()->route('post.index');
+        return redirect()->route('index');
 
     }
 

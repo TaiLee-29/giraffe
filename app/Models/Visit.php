@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Visit extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'ip',
         'continent_code',
@@ -17,6 +16,4 @@ class Visit extends Model
         'clientBrowser',
 
     ];
-
-
 }

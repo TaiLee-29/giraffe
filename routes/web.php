@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 //Route::resource('/', \App\Http\Controllers\PostController::class);
-
+Route::get('/geo',[\App\Http\Controllers\geo\GeoIpRouterController::class,'route']);
 Route::middleware('guest')->group(function (){
     Route::get('/auth/login',[\App\Http\Controllers\AuthController::class, 'login'])->name('login');
     Route::post('/auth/login',[\App\Http\Controllers\AuthController::class, 'handleLogin'])->name('handle-login');
