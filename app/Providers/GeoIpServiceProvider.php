@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
-use App\Services\GeoIpInterface;
-use App\Services\IpApiGeoService;
-use App\Services\MaxMindGeoService;
+
 use Illuminate\Support\ServiceProvider;
+use Tai\Geo\GeoIpInterface;
+use Tai\Geo\IpApiGeoService;
+use Tai\Geo\MaxMindGeoService;
 
 class GeoIpServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,7 @@ class GeoIpServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(GeoIpInterface::class, function () {
-            return new IpApiGeoService();
+            return new MaxMindGeoService();
 
         });
     }

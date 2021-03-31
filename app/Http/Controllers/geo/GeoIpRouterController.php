@@ -7,9 +7,8 @@ namespace App\Http\Controllers\geo;
 use App\Http\Controllers\Controller;
 use App\Models\Visit;
 use App\Providers\GeoIpServiceProvider;
-use App\Services\GeoIpInterface;
-use App\Services\MaxMindGeoService;
-use App\Services\UserAgentInterface;
+use Tai\Geo\GeoIpInterface;
+use Tai\Geo\UserAgentInterface;
 
 class GeoIpRouterController extends Controller
 {

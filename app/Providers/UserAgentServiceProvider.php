@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
-use App\Services\UserAgentGetBrowserService;
-use App\Services\UserAgentInterface;
+
 use Illuminate\Support\ServiceProvider;
+use Tai\Geo\UserAgentGetBrowserService;
+use Tai\Geo\UserAgentInterface;
 
 class UserAgentServiceProvider extends ServiceProvider
 {
