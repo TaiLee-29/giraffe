@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "057987fffc5a4d30ac60d8ade3993f20",
+    "content-hash": "86e4552e919ed4356cf50065cbc74dd1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -469,20 +469,20 @@
         },
         {
             "name": "dumburgulboldi/geoapiservice",
-            "version": "v1.0.5",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TaiLee-29/geoservice1.git",
-                "reference": "073a74cb03aba560dbc6bbe8aec5a709c81c0d9d"
+                "reference": "ac09ff7145b3ef303e61a3d11fba1a99be71b07b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TaiLee-29/geoservice1/zipball/073a74cb03aba560dbc6bbe8aec5a709c81c0d9d",
-                "reference": "073a74cb03aba560dbc6bbe8aec5a709c81c0d9d",
+                "url": "https://api.github.com/repos/TaiLee-29/geoservice1/zipball/ac09ff7145b3ef303e61a3d11fba1a99be71b07b",
+                "reference": "ac09ff7145b3ef303e61a3d11fba1a99be71b07b",
                 "shasum": ""
             },
             "require": {
-                "dumburgulboldi/geointerface": "^1.0.2",
+                "dumburgulboldi/geointerface": "^1.0.0",
                 "geoip2/geoip2": "~2.0",
                 "guzzlehttp/guzzle": "^7.0.1",
                 "php": "^7.3|^8.0"
@@ -499,10 +499,10 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/TaiLee-29/geoservice1/tree/v1.0.5",
+                "source": "https://github.com/TaiLee-29/geoservice1/tree/v1.0.4",
                 "issues": "https://github.com/TaiLee-29/geoservice1/issues"
             },
-            "time": "2021-03-31T11:58:43+00:00"
+            "time": "2021-03-31T11:31:08+00:00"
         },
         {
             "name": "dumburgulboldi/geointerface",
@@ -537,7 +537,7 @@
         },
         {
             "name": "dumburgulboldi/geomaxmindservice",
-            "version": "v1.0.5",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TaiLee-29/geoservice2.git",
@@ -567,7 +567,7 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/TaiLee-29/geoservice2/tree/v1.0.5",
+                "source": "https://github.com/TaiLee-29/geoservice2/tree/v1.0.4",
                 "issues": "https://github.com/TaiLee-29/geoservice2/issues"
             },
             "time": "2021-03-31T12:01:43+00:00"
