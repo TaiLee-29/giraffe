@@ -16,8 +16,8 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "dumburgulboldi/geointerface": "^1.0.2",
-        "dumburgulboldi/geoapiservice": "^1.0.4",
-        "dumburgulboldi/geomaxmindservice": "^1.0.4",
+        "dumburgulboldi/geoapiservice": "^1.0.5",
+        "dumburgulboldi/geomaxmindservice": "^1.0.5",
         "dumburgulboldi/useragentinterface": "^1.0.1",
         "dumburgulboldi/useragentgetbrowserservice": "^1.0.0"
 
